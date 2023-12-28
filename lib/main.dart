@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'constants/constants.dart';
 import 'home/home_page.dart';
 
 void main() {
@@ -12,9 +13,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        scaffoldBackgroundColor: kBackgroundColor,
+        appBarTheme: const AppBarTheme(
+          color: kPrimaryColor,
+        ),
+        primaryColor: kPrimaryColor,
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const HomePage(),
     );
