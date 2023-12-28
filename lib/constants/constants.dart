@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-const Color kPrimaryColor = Color(0xFF0C9869);
-const Color kTextColor = Color(0xFF3C4046);
-const Color kBackgroundColor = Color(0xFFF9F8FD);
+const Color kPrimaryColor = Color.fromARGB(255, 52, 27, 75);
+const Color kTextColor = Color.fromARGB(255, 33, 32, 36);
+const Color kBackgroundColor = Color.fromARGB(255, 223, 211, 253);
 const double kDefaultPadding = 20.0;
 const kUserName = 'Arijeet';

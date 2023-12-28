@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sporthub/components/profile_picture.dart';
 
 import '../constants/constants.dart';
 
@@ -28,8 +29,8 @@ class HeaderWithSearchBox extends StatelessWidget {
             decoration: const BoxDecoration(
               color: kPrimaryColor,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
+                bottomLeft: Radius.circular(31),
+                bottomRight: Radius.circular(31),
               ),
             ),
             child: Row(
@@ -40,7 +41,10 @@ class HeaderWithSearchBox extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 const Spacer(),
-                Image.asset('assets/images/logo.png')
+                const ProfilePicture(
+                  radius: 35,
+                  imagePath: 'assets/images/arijeet.jpeg',
+                ),
               ],
             ),
           ),

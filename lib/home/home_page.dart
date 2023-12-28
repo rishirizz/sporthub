@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../components/bottom_navbar.dart';
+import '../components/featured_plants.dart';
 import '../components/header_and_searchbox.dart';
 import '../components/recommended_plants.dart';
 import '../components/title_with_more_button.dart';
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -37,8 +39,8 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {},
             ),
             const RecomendsPlants(),
-            // TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-            // FeaturedPlants(),
+            TitleWithMoreBtn(title: "Featured Plants", onPressed: () {}),
+            const FeaturedPlants(),
             const SizedBox(height: kDefaultPadding),
           ],
         ),
