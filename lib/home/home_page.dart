@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../components/bottom_navbar.dart';
 import '../components/header_and_searchbox.dart';
+import '../components/recommended_plants.dart';
+import '../components/title_with_more_button.dart';
 import '../constants/constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,8 +32,11 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             HeaderWithSearchBox(size: size),
-            // TitleWithMoreBtn(title: "Recomended", press: () {}),
-            // RecomendsPlants(),
+            TitleWithMoreBtn(
+              title: 'Recommended',
+              onPressed: () {},
+            ),
+            const RecomendsPlants(),
             // TitleWithMoreBtn(title: "Featured Plants", press: () {}),
             // FeaturedPlants(),
             const SizedBox(height: kDefaultPadding),

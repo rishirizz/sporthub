@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants/constants.dart';
 
-
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
     Key? key,
@@ -36,12 +35,12 @@ class HeaderWithSearchBox extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Text(
-                  'Hi Uishopy!',
+                  'Hi $kUserName!',
                   style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 const Spacer(),
-                Image.asset("assets/images/logo.png")
+                Image.asset('assets/images/logo.png')
               ],
             ),
           ),
@@ -71,7 +70,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                     child: TextField(
                       onChanged: (value) {},
                       decoration: InputDecoration(
-                        hintText: "Search",
+                        hintText: 'Search',
                         hintStyle: TextStyle(
                           color: kPrimaryColor.withOpacity(0.5),
                         ),
@@ -83,7 +82,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SvgPicture.asset("assets/icons/search.svg"),
+                  SvgPicture.asset('assets/icons/search.svg'),
                 ],
               ),
             ),
