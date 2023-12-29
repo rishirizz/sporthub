@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sporthub/details/details_page.dart';
 
 import '../constants/constants.dart';
 
@@ -19,12 +20,12 @@ class RecomendsPlants extends StatelessWidget {
             country: "Russia",
             price: 440,
             press: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => DetailsScreen(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsPage(),
+                ),
+              );
             },
           ),
           RecomendPlantCard(
@@ -33,12 +34,12 @@ class RecomendsPlants extends StatelessWidget {
             country: "Russia",
             price: 440,
             press: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => DetailsScreen(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsPage(),
+                ),
+              );
             },
           ),
           RecomendPlantCard(
