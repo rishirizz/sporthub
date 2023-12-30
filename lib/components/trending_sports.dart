@@ -26,6 +26,8 @@ class TrendingSports extends StatelessWidget {
                   builder: (context) => const DetailsPage(
                     imagePath: 'assets/images/workout.jpg',
                     title: 'Workout',
+                    type: 'Intense',
+                    kCal:440,
                   ),
                 ),
               );
@@ -43,6 +45,9 @@ class TrendingSports extends StatelessWidget {
                   builder: (context) => const DetailsPage(
                     imagePath: 'assets/images/treadmill.jpg',
                     title: 'Treadmill',
+                    type: 'HIIT',
+                    kCal:210,
+
                   ),
                 ),
               );
@@ -60,6 +65,9 @@ class TrendingSports extends StatelessWidget {
                   builder: (context) => const DetailsPage(
                     imagePath: 'assets/images/volleyball.jpg',
                     title: 'Volleyball',
+                    type: 'Cardio',
+                    kCal:190,
+
                   ),
                 ),
               );
@@ -156,7 +164,7 @@ class TrendingSportsCard extends StatelessWidget {
                                 ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   const Spacer(),
@@ -181,7 +189,7 @@ class TrendingSportsCard extends StatelessWidget {
                                 ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

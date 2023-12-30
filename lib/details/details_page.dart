@@ -9,9 +9,13 @@ class DetailsPage extends StatelessWidget {
     super.key,
     required this.imagePath,
     required this.title,
+    required this.type,
+    required this.kCal,
   });
   final String imagePath;
   final String title;
+  final String type;
+  final int kCal;
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +32,8 @@ class DetailsPage extends StatelessWidget {
           ),
           TitleAndPrice(
             title: title,
-            country: 'Russia',
-            price: 440,
+            type: type,
+            kCal: kCal,
           ),
           const Spacer(),
           Row(

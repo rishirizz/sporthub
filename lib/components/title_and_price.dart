@@ -6,47 +6,77 @@ class TitleAndPrice extends StatelessWidget {
   const TitleAndPrice({
     Key? key,
     required this.title,
-    required this.country,
-    required this.price,
+    required this.type,
+    required this.kCal,
   }) : super(key: key);
 
-  final String title, country;
-  final int price;
+  final String title, type;
+  final int kCal;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "$title\n",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineMedium!
-                      .copyWith(color: kTextColor, fontWeight: FontWeight.bold),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text(
+                  title.toUpperCase(),
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
-                TextSpan(
-                  text: country,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: kPrimaryColor,
-                    fontWeight: FontWeight.w300,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.yellow,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    type.toUpperCase(),
+                    style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                          color: kPrimaryColor,
+                          fontSize: 18,
+                        ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           const Spacer(),
-          Text(
-            "\$$price",
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall!
-                .copyWith(color: kPrimaryColor),
+          Column(
+            children: [
+              Image.asset(
+                'assets/images/fire.png',
+                color: Colors.orangeAccent,
+              scale: 0.5,
+              ),
+              Row(
+                children: [
+                  Text(
+                    '$kCal ',
+                    style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                        ),
+                  ),
+                  Text(
+                    'kCal',
+                    style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                          color: Colors.orangeAccent,
+                          fontSize: 25,
+
+                        ),
+                  ),
+                ],
+              ),
+            ],
           )
         ],
       ),
