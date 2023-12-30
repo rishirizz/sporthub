@@ -47,7 +47,7 @@ class DetailsPage extends StatelessWidget {
                   color: kPrimaryColor,
                   onPressed: () {},
                   child: const Text(
-                    'Buy Now',
+                    'Watch Video',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,

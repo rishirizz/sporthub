@@ -17,8 +17,8 @@ class TrendingSports extends StatelessWidget {
           TrendingSportsCard(
             image: 'assets/images/workout.jpg',
             title: 'Workout',
-            country: 'Russia',
-            price: 440,
+            type: 'Intense',
+            kCal: 440,
             press: () {
               Navigator.push(
                 context,
@@ -34,8 +34,8 @@ class TrendingSports extends StatelessWidget {
           TrendingSportsCard(
             image: 'assets/images/treadmill.jpg',
             title: 'Treadmill',
-            country: 'Russia',
-            price: 440,
+            type: 'HIIT',
+            kCal: 440,
             press: () {
               Navigator.push(
                 context,
@@ -51,8 +51,8 @@ class TrendingSports extends StatelessWidget {
           TrendingSportsCard(
             image: 'assets/images/volleyball.jpg',
             title: 'Volleyball',
-            country: 'Russia',
-            price: 440,
+            type: 'Cardio',
+            kCal: 440,
             press: () {
               Navigator.push(
                 context,
@@ -76,13 +76,13 @@ class TrendingSportsCard extends StatelessWidget {
     Key? key,
     required this.image,
     required this.title,
-    required this.country,
-    required this.price,
+    required this.type,
+    required this.kCal,
     required this.press,
   }) : super(key: key);
 
-  final String image, title, country;
-  final int price;
+  final String image, title, type;
+  final int kCal;
   final Function()? press;
 
   @override
@@ -125,25 +125,55 @@ class TrendingSportsCard extends StatelessWidget {
                 ],
               ),
               child: Row(
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: "$title\n".toUpperCase(),
-                            style: Theme.of(context).textTheme.labelLarge),
-                        TextSpan(
-                          text: country.toUpperCase(),
-                          style: TextStyle(
-                            color: kPrimaryColor.withOpacity(0.5),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 4.0),
+                        child: Text(
+                          title.toUpperCase(),
+                          style: Theme.of(context).textTheme.labelLarge,
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.yellow,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            type.toUpperCase(),
+                              style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                                color: kPrimaryColor,
+                              ),
+                           
                           ),
                         ),
-                      ],
-                    ),
+                      )
+                    ],
                   ),
+                  // RichText(
+                  //   text: TextSpan(
+                  //     children: [
+                  //       TextSpan(
+                  //           text: "$title\n".toUpperCase(),
+                  //           style: Theme.of(context).textTheme.labelLarge),
+                  //       TextSpan(
+                  //         text: type.toUpperCase(),
+                  //         style: TextStyle(
+                  //           color: kPrimaryColor.withOpacity(0.5),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   const Spacer(),
                   Text(
-                    '\$$price',
+                    '\$$kCal',
                     style: Theme.of(context)
                         .textTheme
                         .labelLarge!

@@ -1,13 +1,14 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants/constants.dart';
 
-
 class IconCard extends StatelessWidget {
   const IconCard({
     Key? key,
-   required this.icon,
+    required this.icon,
   }) : super(key: key);
 
   final String icon;
@@ -36,7 +37,10 @@ class IconCard extends StatelessWidget {
           ),
         ],
       ),
-      child: SvgPicture.asset(icon),
+      child: SvgPicture.asset(
+        icon,
+        color: Colors.blue,
+      ),
     );
   }
 }
