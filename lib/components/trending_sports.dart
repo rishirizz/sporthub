@@ -35,7 +35,7 @@ class TrendingSports extends StatelessWidget {
             image: 'assets/images/treadmill.jpg',
             title: 'Treadmill',
             type: 'HIIT',
-            kCal: 440,
+            kCal: 210,
             press: () {
               Navigator.push(
                 context,
@@ -52,7 +52,7 @@ class TrendingSports extends StatelessWidget {
             image: 'assets/images/volleyball.jpg',
             title: 'Volleyball',
             type: 'Cardio',
-            kCal: 440,
+            kCal: 190,
             press: () {
               Navigator.push(
                 context,
@@ -126,6 +126,7 @@ class TrendingSportsCard extends StatelessWidget {
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -158,28 +159,28 @@ class TrendingSportsCard extends StatelessWidget {
                       )
                     ],
                   ),
-                  // RichText(
-                  //   text: TextSpan(
-                  //     children: [
-                  //       TextSpan(
-                  //           text: "$title\n".toUpperCase(),
-                  //           style: Theme.of(context).textTheme.labelLarge),
-                  //       TextSpan(
-                  //         text: type.toUpperCase(),
-                  //         style: TextStyle(
-                  //           color: kPrimaryColor.withOpacity(0.5),
-                  //         ),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
                   const Spacer(),
-                  Text(
-                    '\$$kCal',
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelLarge!
-                        .copyWith(color: kPrimaryColor),
+                  Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/fire.png',
+                        color: Colors.orangeAccent,
+                      ),
+                      Text(
+                        '$kCal',
+                        style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                              color: kPrimaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      Text(
+                        'kCal',
+                        style:
+                            Theme.of(context).textTheme.labelMedium!.copyWith(
+                                  color: Colors.orangeAccent,
+                                ),
+                      ),
+                    ],
                   )
                 ],
               ),

@@ -63,7 +63,7 @@ class TitleWithCustomUnderline extends StatelessWidget {
             right: 0,
             child: Container(
               margin: const EdgeInsets.only(right: kDefaultPadding / 4),
-              height: 7,
+              height: 5,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
