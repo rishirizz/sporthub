@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../components/bottom_navbar.dart';
-import '../components/featured_plants.dart';
+import '../components/featured_sports.dart';
 import '../components/header_and_searchbox.dart';
-import '../components/recommended_plants.dart';
+import '../components/trending_sports.dart';
 import '../components/title_with_more_button.dart';
 import '../constants/constants.dart';
 
@@ -35,12 +35,12 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             HeaderWithSearchBox(size: size),
             TitleWithMoreBtn(
-              title: 'Recommended',
+              title: 'Trending',
               onPressed: () {},
             ),
-            const RecomendsPlants(),
-            TitleWithMoreBtn(title: "Featured Plants", onPressed: () {}),
-            const FeaturedPlants(),
+            const TrendingSports(),
+            TitleWithMoreBtn(title: 'Featured', onPressed: () {}),
+            const FeaturedSports(),
             const SizedBox(height: kDefaultPadding),
           ],
         ),

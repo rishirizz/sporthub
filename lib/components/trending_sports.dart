@@ -3,8 +3,8 @@ import 'package:sporthub/details/details_page.dart';
 
 import '../constants/constants.dart';
 
-class RecomendsPlants extends StatelessWidget {
-  const RecomendsPlants({
+class TrendingSports extends StatelessWidget {
+  const TrendingSports({
     Key? key,
   }) : super(key: key);
 
@@ -14,10 +14,10 @@ class RecomendsPlants extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/images/image_1.png",
-            title: "Samantha",
-            country: "Russia",
+          TrendingSportsCard(
+            image: 'assets/images/workout.jpg',
+            title: 'Workout',
+            country: 'Russia',
             price: 440,
             press: () {
               Navigator.push(
@@ -28,10 +28,10 @@ class RecomendsPlants extends StatelessWidget {
               );
             },
           ),
-          RecomendPlantCard(
-            image: "assets/images/image_2.png",
-            title: "Angelica",
-            country: "Russia",
+          TrendingSportsCard(
+            image: 'assets/images/treadmill.jpg',
+            title: 'Treadmill',
+            country: 'Russia',
             price: 440,
             press: () {
               Navigator.push(
@@ -42,10 +42,10 @@ class RecomendsPlants extends StatelessWidget {
               );
             },
           ),
-          RecomendPlantCard(
-            image: "assets/images/image_3.png",
-            title: "Samantha",
-            country: "Russia",
+          TrendingSportsCard(
+            image: 'assets/images/volleyball.jpg',
+            title: 'Volleyball',
+            country: 'Russia',
             price: 440,
             press: () {},
           ),
@@ -55,8 +55,8 @@ class RecomendsPlants extends StatelessWidget {
   }
 }
 
-class RecomendPlantCard extends StatelessWidget {
-  const RecomendPlantCard({
+class TrendingSportsCard extends StatelessWidget {
+  const TrendingSportsCard({
     Key? key,
     required this.image,
     required this.title,
@@ -81,7 +81,15 @@ class RecomendPlantCard extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
-          Image.asset(image),
+          ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            ),
+            child: Image.asset(
+              image,
+            ),
+          ),
           GestureDetector(
             onTap: press,
             child: Container(

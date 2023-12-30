@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
 
-class FeaturedPlants extends StatelessWidget {
-  const FeaturedPlants({
+class FeaturedSports extends StatelessWidget {
+  const FeaturedSports({
     Key? key,
   }) : super(key: key);
 
@@ -13,13 +13,18 @@ class FeaturedPlants extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          FeaturePlantCard(
-            image: "assets/images/bottom_img_1.png",
+          FeaturedSportsCard(
+            image: 'assets/images/running.jpg',
             press: () {},
           ),
-          FeaturePlantCard(
-            image: "assets/images/bottom_img_2.png",
+          FeaturedSportsCard(
+            image: 'assets/images/badminton.jpg',
             press: () {},
+          ),
+          FeaturedSportsCard(
+            image: 'assets/images/boxing.jpg',
+            press: () {},
+            borderWidth: 1,
           ),
         ],
       ),
@@ -27,14 +32,16 @@ class FeaturedPlants extends StatelessWidget {
   }
 }
 
-class FeaturePlantCard extends StatelessWidget {
-  const FeaturePlantCard({
+class FeaturedSportsCard extends StatelessWidget {
+  const FeaturedSportsCard({
     Key? key,
-  required  this.image,
-  required  this.press,
+    required this.image,
+    required this.press,
+    this.borderWidth = 0,
   }) : super(key: key);
   final String image;
   final Function() press;
+  final double? borderWidth;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +55,12 @@ class FeaturePlantCard extends StatelessWidget {
           bottom: kDefaultPadding / 2,
         ),
         width: size.width * 0.8,
-        height: 185,
+        height: 200,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            width: borderWidth!,
+          ),
           image: DecorationImage(
             fit: BoxFit.cover,
             image: AssetImage(image),

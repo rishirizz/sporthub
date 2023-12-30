@@ -42,8 +42,8 @@ class HeaderWithSearchBox extends StatelessWidget {
                 ),
                 const Spacer(),
                 const ProfilePicture(
-                  radius: 35,
-                  imagePath: 'assets/images/arijeet.jpeg',
+                  radius: 40,
+                  imagePath: 'assets/images/profile.jpg',
                 ),
               ],
             ),
