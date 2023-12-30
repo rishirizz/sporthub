@@ -10,21 +10,24 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
+    return Container(
+      color: kBackgroundColor,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          ImageAndIcons(size: size),
+          ImageAndIcons(size: size,imagePath: ,),
           const TitleAndPrice(
-            title: 'Angelica',
+            title: 'Workout',
             country: 'Russia',
             price: 440,
           ),
-          const SizedBox(height: kDefaultPadding),
+          const Spacer(),
           Row(
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               SizedBox(
                 width: size.width / 2,
-                height: 84,
+                height: 74,
                 child: MaterialButton(
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -45,7 +48,12 @@ class DetailsPage extends StatelessWidget {
               Expanded(
                 child: MaterialButton(
                   onPressed: () {},
-                  child: const Text('Description'),
+                  child: const Text(
+                    'Description',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ),
             ],

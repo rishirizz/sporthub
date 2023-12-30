@@ -40,6 +40,9 @@ class _HomePageState extends State<HomePage> {
             ),
             const TrendingSports(),
             TitleWithMoreBtn(title: 'Featured', onPressed: () {}),
+            const SizedBox(
+              height: kDefaultPadding,
+            ),
             const FeaturedSports(),
             const SizedBox(height: kDefaultPadding),
           ],

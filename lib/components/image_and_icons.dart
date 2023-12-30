@@ -8,16 +8,18 @@ class ImageAndIcons extends StatelessWidget {
   const ImageAndIcons({
     Key? key,
     required this.size,
+    required this.imagePath,
   }) : super(key: key);
 
   final Size size;
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
+      padding: const EdgeInsets.only(bottom: kDefaultPadding),
       child: SizedBox(
-        height: size.height * 0.8,
+        height: size.height * 0.75,
         child: Row(
           children: <Widget>[
             Expanded(
@@ -47,7 +49,7 @@ class ImageAndIcons extends StatelessWidget {
               ),
             ),
             Container(
-              height: size.height * 0.8,
+              height: size.height * 0.60,
               width: size.width * 0.75,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
@@ -63,8 +65,8 @@ class ImageAndIcons extends StatelessWidget {
                 ],
                 image: const DecorationImage(
                   alignment: Alignment.centerLeft,
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/img.png'),
+                  fit: BoxFit.fitHeight,
+                  image: AssetImage('assets/images/workout.jpg'),
                 ),
               ),
             ),
