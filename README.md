@@ -1,16 +1,8 @@
-# sporthub
+Sportshub is an app where users can scroll through a list of sports and tap on it to view the details.
+It comprises two pages ie; Home and Details.
+The home page consists of a featured and trending sports list.
+Tapping on the Trending sports card will show its respective details.
 
-A new Flutter project.
+App preview :
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Sportshub](https://github.com/rishirizz/sporthub/assets/76464776/d82825e2-4e37-4022-9e92-c789903ae556)
