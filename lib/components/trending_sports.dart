@@ -23,7 +23,10 @@ class TrendingSports extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const DetailsPage(),
+                  builder: (context) => const DetailsPage(
+                    imagePath: 'assets/images/workout.jpg',
+                    title: 'Workout',
+                  ),
                 ),
               );
             },
@@ -37,7 +40,10 @@ class TrendingSports extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const DetailsPage(),
+                  builder: (context) => const DetailsPage(
+                    imagePath: 'assets/images/treadmill.jpg',
+                    title: 'Treadmill',
+                  ),
                 ),
               );
             },
@@ -47,7 +53,17 @@ class TrendingSports extends StatelessWidget {
             title: 'Volleyball',
             country: 'Russia',
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsPage(
+                    imagePath: 'assets/images/volleyball.jpg',
+                    title: 'Volleyball',
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),

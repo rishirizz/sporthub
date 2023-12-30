@@ -9,10 +9,12 @@ class ImageAndIcons extends StatelessWidget {
     Key? key,
     required this.size,
     required this.imagePath,
+    required this.title,
   }) : super(key: key);
 
   final Size size;
   final String imagePath;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +65,10 @@ class ImageAndIcons extends StatelessWidget {
                     color: kPrimaryColor.withOpacity(0.29),
                   ),
                 ],
-                image: const DecorationImage(
+                image: DecorationImage(
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.fitHeight,
-                  image: AssetImage('assets/images/workout.jpg'),
+                  image: AssetImage(imagePath),
                 ),
               ),
             ),

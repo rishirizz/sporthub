@@ -5,7 +5,13 @@ import '../components/title_and_price.dart';
 import '../constants/constants.dart';
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({super.key});
+  const DetailsPage({
+    super.key,
+    required this.imagePath,
+    required this.title,
+  });
+  final String imagePath;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +21,13 @@ class DetailsPage extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          ImageAndIcons(size: size,imagePath: ,),
-          const TitleAndPrice(
-            title: 'Workout',
+          ImageAndIcons(
+            size: size,
+            imagePath: imagePath,
+            title: title,
+          ),
+          TitleAndPrice(
+            title: title,
             country: 'Russia',
             price: 440,
           ),
