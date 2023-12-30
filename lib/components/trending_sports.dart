@@ -147,10 +147,12 @@ class TrendingSportsCard extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             type.toUpperCase(),
-                              style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                                color: kPrimaryColor,
-                              ),
-                           
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium!
+                                .copyWith(
+                                  color: kPrimaryColor,
+                                ),
                           ),
                         ),
                       )
